@@ -1,0 +1,35 @@
+"""
+Here I have implemented two functions which prints out the lyrics of '99 bottles of beer'.
+The first implementation uses a while loop, the second uses a for loop.
+"""
+
+def bottles99():
+    # Implemented with while loop
+    count = 99
+    duplicate = count
+    while count > 0:
+        if count > 1:
+            print(str(count)+" bottles of beer on the wall, "+str(count)+" bottles of beer."\
+                  +" Take one down and pass it around, "+str(count-1)+" bottles of beer on the wall.")
+            count -= 1
+        if count == 1:
+            print(str(count)+" bottle of beer on the wall, "+str(count)+" bottle of beer."\
+                  +" Take one down and pass it around, no more bottles of beer on the wall.")
+            count -= 1
+    print("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, " \
+          +str(duplicate)+ " bottles of beer on the wall.")
+    
+def bottles99v2():
+    # Implemented with for loop
+    last = 99
+    for count in range(99,0,-1):
+        if count > 1:
+            print(str(count)+" bottles of beer on the wall, "+str(count)+" bottles of beer."\
+                  +" Take one down and pass it around, "+str(count-1)+" bottles of beer on the wall.")
+            count -= 1
+        if count == 1:
+            print(str(count)+" bottle of beer on the wall, "+str(count)+" bottle of beer."\
+                  +" Take one down and pass it around, no more bottles of beer on the wall.")
+            count -= 1
+    print("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, " \
+          +str(last)+ " bottles of beer on the wall.")
