@@ -1,0 +1,154 @@
+"""
+Simulate a magic 8-ball.
+Allow the user to enter their question.
+Display an in progress message(i.e. "thinking").
+Create 20 responses, and show a random response.
+Allow the user to ask another question or quit.
+"""
+
+def magic8ball():
+    a1 = "As I see it, yes."
+    a2 = "Ask again later."
+    a3 = "Better not tell you now."
+    a4 = "Cannot predict now."
+    a5 = "Concentrate and ask again."
+    a6 = "Don’t count on it."
+    a7 = "It is certain."
+    a8 = "It is decidedly so."
+    a9 = " Most likely."
+    a10 = "My reply is no."
+    a11 = "My sources say no."
+    a12 = "Outlook not so good."
+    a13 = "Outlook good."
+    a14 = "Reply hazy, try again."
+    a15 = "Signs point to yes."
+    a16 = "Very doubtful."
+    a17 = "Without a doubt."
+    a18 = "Yes."
+    a19 = "Yes – definitely."
+    a20 = "You may rely on it."
+    import random
+    while True:
+        randint = random.randint(1,20)
+        x = input("Ask your question: ")
+        print("Thinking")
+        if randint==1:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==2:
+            print(a2)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==3:
+            print(a3)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==4:
+            print(a4)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==5:
+            print(a5)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==6:
+            print(a6)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==7:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==8:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==9:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==10:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==11:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==12:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==13:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==14:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==15:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==16:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==17:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==18:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==19:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
+        if randint==20:
+            print(a1)
+            y = input("Would you like to ask another question???"\
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+            if "Quit" in y or "quit" in y:
+                break
