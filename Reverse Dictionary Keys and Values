@@ -1,0 +1,8 @@
+def reversedict(dictionary):
+    """Takes in a dictionary and returns another dictionary which takes the 
+    values of the first dictionary as keys, and the keys of the first 
+    dictionary as values."""
+    rev = {}
+    for key in dictionary.keys():
+        rev[dictionary[key]] = key
+    return rev
