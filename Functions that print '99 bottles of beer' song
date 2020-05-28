@@ -5,31 +5,34 @@ The first implementation uses a while loop, the second uses a for loop.
 
 def bottles99():
     # Implemented with while loop
-    count = 99
+    count = 99 # Value to use as decrementing function in while loop
     duplicate = count
     while count > 0:
         if count > 1:
             print(str(count)+" bottles of beer on the wall, "+str(count)+" bottles of beer."\
                   +" Take one down and pass it around, "+str(count-1)+" bottles of beer on the wall.")
-            count -= 1
+                  # If more than one bottle left, print song verse using 'bottles'
+            count -= 1 # Decrement count by 1
         if count == 1:
             print(str(count)+" bottle of beer on the wall, "+str(count)+" bottle of beer."\
                   +" Take one down and pass it around, no more bottles of beer on the wall.")
-            count -= 1
+                  # If only one bottle left, pring song verse using 'bottle'
+            count -= 1 # Decrement count by 1
     print("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, " \
-          +str(duplicate)+ " bottles of beer on the wall.")
+          +str(duplicate)+ " bottles of beer on the wall.") # Once while loop is terminated, no more bottles left, so print final verse
     
 def bottles99v2():
     # Implemented with for loop
     last = 99
-    for count in range(99,0,-1):
+    for count in range(99,0,-1): # Counts backwards from 99 to 1
         if count > 1:
             print(str(count)+" bottles of beer on the wall, "+str(count)+" bottles of beer."\
                   +" Take one down and pass it around, "+str(count-1)+" bottles of beer on the wall.")
-            count -= 1
+                  # If more than one bottle left, print song verse using 'bottles'
         if count == 1:
             print(str(count)+" bottle of beer on the wall, "+str(count)+" bottle of beer."\
                   +" Take one down and pass it around, no more bottles of beer on the wall.")
-            count -= 1
+                  # If only one bottle left, pring song verse using 'bottle'
     print("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, " \
           +str(last)+ " bottles of beer on the wall.")
+          # Once for loop is terminated, no more bottles left, so print final verse
