@@ -32,7 +32,8 @@ def menu_calculator(order):
                   'Small Drink':1.25}
     for num in order:
         total += itemToPrice[numToItem[num]]
-    return round(total,2)
-# This works but if total is, for example, $20.50, it prints 20.5
-# Haven't done subgoals
-# In progress
+    answer = '$'+str(total)
+    if len(answer[answer.index('.'):])<3:
+        answer = answer+'0'
+    return answer
+# In progress: Works properly, but have not met the subgoals and intend to complete those.
