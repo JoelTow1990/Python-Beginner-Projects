@@ -26,14 +26,15 @@ def menu_calculator(order):
     total = 0.00
     numToItem = {'1':'Chicken Strips','2':'French Fries','3':'Hamburger','4':'Hotdog',\
                  '5':'Large Drink','6':'Medium Drink','7':'Milk Shake','8':'Salad',\
-                 '9':'Small Drink'}
+                 '9':'Small Drink'} # Maps numbers to items
     itemToPrice= {'Chicken Strips':3.50,'French Fries':2.50,'Hamburger':4.00,'Hotdog':3.50,\
                   'Large Drink':1.75,'Medium Drink':1.50,'Milk Shake':2.25,'Salad':3.75,\
-                  'Small Drink':1.25}
+                  'Small Drink':1.25} # Maps items to prices
     for num in order:
-        total += itemToPrice[numToItem[num]]
-    answer = '$'+str(total)
+        total += itemToPrice[numToItem[num]] # For each number in order, increase total by the price of that item. 
+        # Price is found by calling each number in numToItem to retrieve string, and using this string in itemToPrice to retrieve price.  
+    answer = '$'+str(total) # Convert total to string and put $ in front of it.
     if len(answer[answer.index('.'):])<3:
-        answer = answer+'0'
+        answer = answer+'0' # If there is only one zero after the decimal point, add another zero after the decimal.
     return answer
 # In progress: Works properly, but have not met the subgoals and intend to complete those.
