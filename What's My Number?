@@ -1,0 +1,102 @@
+"""
+Between 1 and 1000, there is only 1 number that meets the following criteria:
+
+The number has two or more digits.
+The number is prime.
+The number does NOT contain a 1 or 7 in it.
+The sum of all of the digits is less than or equal to 10.
+The first two digits add up to be odd.
+The second to last digit is even and greater than 1.
+The last digit is equal to how many digits are in the number.
+
+Find the number!
+"""
+
+def is_prime(num):
+    """ Assumes num is an int, returns True if num is a prime number, False otherwise
+    
+    num: int
+    returns: bool
+    """
+    if num<=1 or num%2==0 and num!=2:
+        return False # If number is equal to or less than one, or is an even number
+        # other than two, then return False
+    if num==2:
+        return True # Return true if number is 2
+    for i in range(3, int(num**0.5)+1, 2):
+        if num%i==0:
+            return False # If number is divisible by any odd number between
+            # 3 and the square root of number + 1, then return False
+    return True # If none of previous conditions met, return True
+
+def primeList(n,m):
+    """ Creates a list containing every prime between n and m (inclusive)
+    
+    Assumes n am are ints
+    
+    returns: list of ints
+    """
+    primes = [] # Create empty list
+    for num in range(n,m+1): # Iterate over all numbers from n to m
+        if is_prime(num):
+            primes.append(num) # If a number is prime, add it to the list
+    return primes # Return list of primes between n and m
+
+def no_one_or_seven(n):
+    """ Assumes n is either int or float. Returns True if number does not contain
+    digit 1 or 7, False otherwise.
+    
+    n: int or float
+    returns: bool
+    """
+    check = str(n)
+    if '1' in check or '7' in check:
+        return False
+    return True
+
+def sum_digits(n):
+    """ Assumes n is an int. Returns a sum of the digits in n
+    
+    n: int
+    returns: int
+    """
+    work = str(n)
+    answer = 0
+    for digit in work:
+        answer += int(digit)
+    return answer
+
+def secondlast_even_over1(n):
+    """ Assumes n is int, returns True if second last digit in n is an even number
+    greater than 1, False otherwise
+    
+    n: int
+    returns: bool
+    """
+    return int(str(n)[-2])>1 and int(str(n)[-2])%2==0
+
+def lastdigitislen(n):
+    """ Assumes n is an int, returns true if last digit is equal to length of n,
+    False otherwise
+    
+    n: int
+    returns: bool
+    """
+    return int(str(n)[-1])==len(str(n))
+
+def first2odd(n):
+    """ Assumes n is an int of len >= 2, returns True if sum of first two digits
+    is odd, False otherwise
+    
+    n: int of len >= 2
+    returns: bool
+    """
+    return (int(str(n)[0])+int(str(n)[1]))%2!=0
+
+def whats_the_number():
+    check = primeList(10,1000)
+    answer = []
+    for num in check:
+        if first2odd(num) and lastdigitislen(num) and secondlast_even_over1(num)\
+        and no_one_or_seven(num) and sum_digits(num) <= 10:
+            return num
