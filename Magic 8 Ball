@@ -26,18 +26,19 @@ def magic8ball():
     a17 = "Without a doubt."
     a18 = "Yes."
     a19 = "Yes – definitely."
-    a20 = "You may rely on it."
-    import random
-    while True:
-        randint = random.randint(1,20)
-        x = input("Ask your question: ")
+    a20 = "You may rely on it." # All the answers the 8ball can give.
+    import random # Import random so I can generate random integer.
+    while True: # Use a while loop so the user will keep being prompted to ask que tions until they meet terminating condition.
+        randint = random.randint(1,20) # Generate random integer between 1 and 20 (inclusive).
+        x = input("Ask your question: ") # Ask user to input question.
         print("Thinking")
-        if randint==1:
-            print(a1)
+        if randint==1: 
+            print(a1) # If random int is 1, the first answer is printed
             y = input("Would you like to ask another question???"\
-                      + "Type 'Quit' to exit, otherwise type anything to ask another question.")
+                      + "Type 'Quit' to exit, otherwise type anything to ask another question.") # Ask if user wants to quit
             if "Quit" in y or "quit" in y:
-                break
+                break # If user wants to quit, terminate loop.
+        # Pattern repeated below for the other 19 possible answers, each being mapped to a unique integer between 2 and 20.
         if randint==2:
             print(a2)
             y = input("Would you like to ask another question???"\
