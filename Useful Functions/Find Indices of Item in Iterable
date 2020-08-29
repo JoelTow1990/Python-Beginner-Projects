@@ -1,5 +1,5 @@
 def find_indices(obj, item, index=0):
-    """ Assumes obj is an iterable such as a string, list, or tuple
+    """Assumes obj is an iterable such as a string, list, or tuple
     returns a list of ints corresponding to the indices in obj where item occurs
     index is the start point of search, default value is 0
     """
