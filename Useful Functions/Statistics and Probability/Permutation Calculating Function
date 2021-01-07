@@ -1,0 +1,10 @@
+def permute(n,r):
+    """ n and r are ints
+    returns an int such that the result is the permutation of n and r (nPr)
+    """
+    if n < r or n < 0 or r < 0:
+        raise ValueError("Please enter n and r such that n >= r >= 0")
+    res = 1
+    for i in range(n,n-r,-1):
+        res *= i
+    return res
