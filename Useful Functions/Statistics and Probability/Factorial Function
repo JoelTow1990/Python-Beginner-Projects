@@ -1,0 +1,12 @@
+def factorial(n):
+    """ n is an int
+    returns the factorial of n (an int)
+    """
+    if type(n) != int:
+        raise TypeError("Please enter an integer n such that n >= 0")
+    if n < 0:
+        raise ValueError("Please enter an integer n such that n >= 0")
+    res = 1
+    for i in range(1,n+1):
+        res *= i
+    return res
