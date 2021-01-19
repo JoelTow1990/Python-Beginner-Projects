@@ -1,0 +1,3 @@
+def variance(numbers): 
+    mean = sum([i for i in numbers]) / len(numbers)
+    return (sum((i-mean)**2 for i in numbers)/len(numbers))**0.5
